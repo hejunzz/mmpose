@@ -28,8 +28,9 @@ channel_cfg = dict(
 # model settings
 model = dict(
     type='TopDown',
-    pretrained='https://download.openmmlab.com/mmpose/'
-    'pretrain_models/hrnet_w48-8ef0771d.pth',
+    pretrained=None,
+    # pretrained='https://download.openmmlab.com/mmpose/'
+    # 'pretrain_models/hrnet_w48-8ef0771d.pth',
     backbone=dict(
         type='HRNet',
         in_channels=3,
@@ -165,3 +166,7 @@ data = dict(
         pipeline=test_pipeline,
         dataset_info={{_base_.dataset_info}}),
 )
+
+# use the pre-trained model for the whole HRNet
+# load_from = 'https://download.openmmlab.com/mmpose/top_down/hrnet/hrnet_w48_coco_384x288_dark-741844ba_20200812.pth'  # model path can be found in model zoo
+load_from = 'https://download.openmmlab.com/mmpose/top_down/hrnet/hrnet_w48_coco_wholebody_256x192-643e18cb_20200922.pth'
