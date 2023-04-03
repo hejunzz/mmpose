@@ -171,4 +171,5 @@ data = dict(
 
 # use the pre-trained model for the whole HRNet
 # load_from = 'https://download.openmmlab.com/mmpose/top_down/hrnet/hrnet_w48_coco_384x288_dark-741844ba_20200812.pth'  # model path can be found in model zoo
-load_from = 'https://download.openmmlab.com/mmpose/top_down/hrnet/hrnet_w48_coco_wholebody_256x192-643e18cb_20200922.pth'
+# load_from = 'https://download.openmmlab.com/mmpose/top_down/hrnet/hrnet_w48_coco_wholebody_256x192-643e18cb_20200922.pth'
+load_from = './work_dirs/hrnet_w48_coco_wholebody_256x192/hrnet_w48_coco_wholebody_256x192-643e18cb_20200922.pth'
