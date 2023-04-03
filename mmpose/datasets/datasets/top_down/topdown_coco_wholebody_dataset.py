@@ -200,7 +200,7 @@ class TopDownCocoWholeBodyDataset(TopDownCocoDataset):
             coco_det,
             'keypoints_body',
             self.sigmas[cuts[0]:cuts[1]],
-            use_area=True)
+            use_area=False)
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
@@ -211,7 +211,7 @@ class TopDownCocoWholeBodyDataset(TopDownCocoDataset):
             coco_det,
             'keypoints_foot',
             self.sigmas[cuts[1]:cuts[2]],
-            use_area=True)
+            use_area=False)
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
@@ -222,7 +222,7 @@ class TopDownCocoWholeBodyDataset(TopDownCocoDataset):
             coco_det,
             'keypoints_face',
             self.sigmas[cuts[2]:cuts[3]],
-            use_area=True)
+            use_area=False)
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
@@ -233,7 +233,7 @@ class TopDownCocoWholeBodyDataset(TopDownCocoDataset):
             coco_det,
             'keypoints_lefthand',
             self.sigmas[cuts[3]:cuts[4]],
-            use_area=True)
+            use_area=False)
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
@@ -244,7 +244,7 @@ class TopDownCocoWholeBodyDataset(TopDownCocoDataset):
             coco_det,
             'keypoints_righthand',
             self.sigmas[cuts[4]:cuts[5]],
-            use_area=True)
+            use_area=False)
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
@@ -255,7 +255,7 @@ class TopDownCocoWholeBodyDataset(TopDownCocoDataset):
             coco_det,
             'keypoints_wholebody',
             self.sigmas,
-            use_area=True)
+            use_area=False)
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
